@@ -1,0 +1,122 @@
+2025-10-12 16:15:26.669 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:15:53.889 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-12 16:15:54.193 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-12 16:15:54.382 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-12 16:15:54.385 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2025-10-12 16:15:54.386 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:15:54.386 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2025-10-12 16:15:54.386 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2025-10-12 16:15:54.391 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+2025-10-12 16:15:54.731 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-12 16:24:50.116 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:25:19.353 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:25:42.438 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-12 16:25:42.737 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-12 16:25:42.914 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-12 16:25:42.917 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2025-10-12 16:25:42.917 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:25:42.918 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2025-10-12 16:25:42.918 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2025-10-12 16:25:42.921 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+2025-10-12 16:25:43.881 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-12 16:25:43.893 [main] INFO  org.example.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-10-12 16:25:43.947 [main] ERROR org.example.dao.UserDaoImpl - Error saving user: User{id=null, name='Ilya', email='ilya@mail.ru', age=32, createdAt=2025-10-12T16:25:42.340185500}
+java.lang.IllegalArgumentException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:769) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:750) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.example.dao.UserDaoImpl.save(UserDaoImpl.java:70) [classes/:?]
+	at org.example.Main.createUser(Main.java:102) [classes/:?]
+	at org.example.Main.main(Main.java:33) [classes/:?]
+Caused by: org.hibernate.UnknownEntityTypeException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.getEntityDescriptor(MappingMetamodelImpl.java:388) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1498) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:292) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:766) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 4 more
+2025-10-12 16:27:43.964 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:28:04.351 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-12 16:28:04.650 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-12 16:28:04.843 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-12 16:28:04.846 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2025-10-12 16:28:04.846 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:28:04.846 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2025-10-12 16:28:04.846 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2025-10-12 16:28:04.849 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+2025-10-12 16:28:05.933 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-12 16:28:05.945 [main] INFO  org.example.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-10-12 16:28:06.003 [main] ERROR org.example.dao.UserDaoImpl - Error saving user: User{id=null, name='Ilya', email='ilya@mail.ru', age=22, createdAt=2025-10-12T16:28:04.261394900}
+java.lang.IllegalArgumentException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:866) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:845) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.example.dao.UserDaoImpl.save(UserDaoImpl.java:72) [classes/:?]
+	at org.example.Main.createUser(Main.java:102) [classes/:?]
+	at org.example.Main.main(Main.java:33) [classes/:?]
+Caused by: org.hibernate.UnknownEntityTypeException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.getEntityDescriptor(MappingMetamodelImpl.java:388) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1487) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityState(DefaultMergeEventListener.java:187) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:148) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:143) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:127) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:81) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:859) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 4 more
+2025-10-12 16:28:17.537 [main] INFO  org.example.util.HibernateUtil - Closing Hibernate SessionFactory
+2025-10-12 16:28:17.541 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:28:17.545 [main] INFO  org.example.Main - User Service Application stopped
+2025-10-12 16:34:06.181 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:34:32.448 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-12 16:34:32.738 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-12 16:34:32.930 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-12 16:34:32.934 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2025-10-12 16:34:32.935 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:34:32.935 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2025-10-12 16:34:32.935 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2025-10-12 16:34:32.938 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+2025-10-12 16:34:33.782 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-12 16:34:33.794 [main] INFO  org.example.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-10-12 16:34:33.851 [main] ERROR org.example.dao.UserDaoImpl - Error saving user: User{id=null, name='Ilya', email='ilya@mail.com', age=22, createdAt=2025-10-12T16:34:32.338321200}
+java.lang.IllegalArgumentException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:866) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:845) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.example.dao.UserDaoImpl.save(UserDaoImpl.java:72) [classes/:?]
+	at org.example.Main.createUser(Main.java:102) [classes/:?]
+	at org.example.Main.main(Main.java:33) [classes/:?]
+Caused by: org.hibernate.UnknownEntityTypeException: Unable to locate persister: org.example.entity.User
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.getEntityDescriptor(MappingMetamodelImpl.java:388) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1487) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityState(DefaultMergeEventListener.java:187) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:148) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:143) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:127) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:81) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:859) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
+	... 4 more
+2025-10-12 16:40:41.853 [main] INFO  org.example.Main - Starting User Service Application
+2025-10-12 16:40:59.052 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-12 16:40:59.359 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-12 16:40:59.544 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-12 16:40:59.547 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2025-10-12 16:40:59.547 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:40:59.548 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+2025-10-12 16:40:59.548 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2025-10-12 16:40:59.550 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+2025-10-12 16:41:01.286 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-12 16:41:01.323 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1cd2ff5b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-10-12 16:41:01.385 [main] INFO  org.example.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-10-12 16:41:01.540 [main] INFO  org.example.dao.UserDaoImpl - User saved successfully with id: 1
+2025-10-12 16:41:30.036 [main] INFO  org.example.dao.UserDaoImpl - Found 1 users
+2025-10-12 16:41:56.996 [main] INFO  org.example.dao.UserDaoImpl - User saved successfully with id: 2
+2025-10-12 16:42:22.807 [main] INFO  org.example.dao.UserDaoImpl - User found by id 6: not found
+2025-10-12 16:42:48.169 [main] INFO  org.example.dao.UserDaoImpl - User found by id 2: exists
+2025-10-12 16:42:51.935 [main] INFO  org.example.util.HibernateUtil - Closing Hibernate SessionFactory
+2025-10-12 16:42:51.937 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/user_service]
+2025-10-12 16:42:51.939 [main] INFO  org.example.Main - User Service Application stopped
